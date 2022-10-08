@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body >
+    <script>
+        let sum=0;
+        let arr=[];
+        while(no!=0){
+            var no=+prompt("enter a number other than 0");
+            arr.push(no);
+            sum+=no;
+        }
+        let avg = sum/(arr.length-1);
+        document.write(`<h2 class="text-bold text-center text-xl mt-3">The average of no's are ${avg}</h2>`)
+        document.write(`<h2 class="text-center text-bold text-xl mt-[21%]">The no greater than avg are :</h2>`)
+
+        for(var i=0;i<arr.length;i++){
+            if(arr[i]>avg){
+                document.write(`<h2 class="text-center text-bold text-2xl"> ${arr[i]}</h2>`)
+            }
+        }
+
+        </script>
+
+    
+</body>
+</html>

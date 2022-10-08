@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+    function unitConvert() {
+        var Display = document.getElementById("display");
+        var Qty = document.getElementById("qty").value;
+        var From = document.getElementById("from").value;
+        var To = document.getElementById("to").value;
+        Display.innerHTML = "";
+        var Mul = 1;
+        if (From == "Kilometer") {
+          if (To == "Meter") {
+            var Mul = 1000;
+          }
+          else if (To == "Centimeter") {
+            var Mul = 100000;
+          }
+          else if (To == "Millimeter") {
+            var Mul = 1000000;
+          }
+        }
+        else if (From == "Meter") {
+          if (To == "Kilometer") {
+            var Mul = (1 / 1000);
+          }
+          else if (To == "Centimeter") {
+            var Mul = 100;
+          }
+          else if (To == "Millimeter") {
+            var Mul = 1000;
+          }
+        }
+        else if (From == "Centimeter") {
+          if (To == "Kilometer") {
+            var Mul = (1 / 100000);
+          }
+          else if (To == "Meter") {
+            var Mul = (1 / 100);
+          }
+          else if (To == "Millimeter") {
+            var Mul = 10;
+          }
+        }
+        else {
+          if (To == "Kilometer") {
+            var Mul = (1 / 1000000);
+          }
+          else if (To == "Meter") {
+            var Mul = (1 / 1000);
+          }
+          else if (To == "Centimeter") {
+            var Mul = (1 / 10);
+          }
+        }
+        Display.innerHTML = `<div class="text-2xl text-center text-bold">${Qty} ${From} is ${Qty * Mul} ${To}</div>`
+      }
+     </script> 
+
+
+    <div class="flex justify-center mt-20 ">
+        <input class="border border-black rounded-md text-center p-2 mx-2" type="number" id="qty" placeholder="Enter Quantity in num" />
+        <select id="from" class="border border-black rounded-md text-center p-2">
+          <option selected>Kilometer</option>
+          <option>Meter</option>
+          <option>Centimeter</option>
+          <option>Millimeter</option>
+        </select>
+        <div class="text-2xl text-bold mx-2"> to </div>
+        <select id="to" class="border border-black rounded-md text-center mr-2 p-2">
+          <option selected>Kilometer</option>
+          <option>Meter</option>
+          <option>Centimeter</option>
+          <option>Millimeter</option>
+        </select>
+        <button onclick="unitConvert()" class="border rounded-md px-2 py-6  bg-blue-500 p-2">Convert</button>
+      </div>
+      <div id="display"></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    width: 70vw;
+    
+}
+.unique{
+    color:blue;
+}
+img{
+    width: 52%;
+    height: 500px;
+}
+.inner-div{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(248, 246, 244);
+    padding: 54px 42px; 
+    justify-content: center;
+}
+.btn{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    
+}
+.btn-1 {
+    margin: 0 2px;
+    padding: 8px;
+    background-color: blue;
+    color: white;
+    border-radius: 4px;
+}
+
+.btn-2{
+    margin: 0 2px;
+    padding: 8px;
+    color: blue;
+    border-radius: 4px;
+}
+h1{
+    font-size: 45px;
+}
+p{
+    margin-top: -12px;
+    
+}

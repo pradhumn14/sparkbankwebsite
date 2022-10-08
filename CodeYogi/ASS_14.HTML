@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <script>
+        function showMessage(event){
+            let num=event.target.value;
+
+    const table=document.getElementById('printTable');
+    table.innerHTML="";
+    for (let i = 10; i > 0; i--) {
+          table.innerHTML+= `<br>${num}  x  ${i}  =  ${num * i}`;
+        }
+    }
+       
+    </script>
+    <div class="text-center mt-3">
+    <input type="number" placeholder="Enter Number" oninput="showMessage(event)" class="border-black border">
+    <div id="printTable"></div>
+    </div>
+</body>
+</html>
