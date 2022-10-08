@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let day= prompt('Enter day of the week')
+        if(day=="Monday" || day == "monday"){
+             document.write(`<h2 >9am to 5pm </h2>`)
+        }
+        else if(day=="Saturday" || day == "saturday"){
+             document.write(`<h2>9am to 12noon </h2>`)
+        }
+        else if(day=="Sunday" || day == "sunday"){
+             document.write(`<h2>Closed </h2>`)
+        }
+        else{
+          if(day=="Tuesday" || day=="tuesday" || day=="wednesday" || day=="Wednesday" || day=="thursday" || day=="Thursday" || day=="friday" || day=="Friday"){
+            document.write(`<h2>Not available information</h2>`)
+          }
+          else
+          document.write(`<h2>Please enter correct Day</h2>`);
+        
+        }
+      </script>
+</body>
+</html>

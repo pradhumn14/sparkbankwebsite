@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <script>
+        function showTable(event){
+            let num=tableOf.value;
+            let till=tableTill.value;
+             const mytable = document.getElementById("table");
+            mytable.innerHTML="";
+             for (var i = 1; i <= till; i++ ){
+                    mytable.innerHTML = `${mytable.innerHTML}<div>${num} x ${i} = ${num*i}</div>`;
+            }
+         }
+    </script>
+    
+    <div class="flex text-center mt-10 justify-center mb-4">
+        <input type="number" id="tableOf" placeholder="table from" class="border border-black ml-2 text-center rounded-md">
+        <input type="number" id="tableTill" placeholder="table till" class="border border-black mx-2 text-center rounded-md">
+        <button class="text-white bg-blue-500 py-2 px-4 rounded-md"  onclick="showTable(event)">Show Table</button>
+    </div>
+    <div id="table" class="text-center text-bold"></div>
+    
+</body>
+</html>
