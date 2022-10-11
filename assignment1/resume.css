@@ -1,0 +1,50 @@
+.intro{
+    text-align: center;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+}
+#introduction{
+    font-size: 24px;
+    color:rgb(5, 5, 254);
+}
+.resume{
+    border:3px solid rgb(0, 162, 255);
+    height: 80px;
+    width:90px;
+    border-radius:18%;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align:center;
+    /* padding: 5px; */
+}
+.in li{
+    display: inline;
+    margin-right: 10px;
+}
+.in li::before{
+    content:"\25CF";
+}
+hr{
+    border-width: 2px;
+    border-color: blue;
+}
+.hed{
+    color: rgb(39, 85, 202);
+    font-size:20px;
+    font-weight:800;
+}
+.right{
+    float:right;
+    text-decoration: none;
+}
+fieldset{
+    border:2px solid black;
+}
+a{
+    color:goldenrod;
+}
+a:hover{
+    color:blue;
+}
